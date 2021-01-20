@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "RssFeedModel";
+
+}
+@model IEnumerable<NewsFeedWebsite.Models.RssFeedModel>
+    <div>
+
+
+        <div>
+            <form asp-controller="RssFeed" asp-action="Index" method="get">
+                <input placeholder="Indsæt Rss Feed Url her" type="text" name="SearchString"/>
+                <input type="submit" value="Læs Rss"/>
+            </form>
+        </div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+
+
+                            @Html.ActionLink("Titel", "Index", new { searchString = ViewData["SearchString"],  sortOrder = ViewData["FeedTitle"] })
+
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.Summary)
+                        </th>
+                        <th>
+                            @Html.ActionLink("Udgivelses Dato", "Index", new {searchString = ViewData["SearchString"], sortOrder = ViewData["PublishDate"] })
+
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <a href="@item.Url">@item.Title</a>
+
+                            </td>
+                            <td>
+                                @item.Summary
+                            </td>
+                            <td>
+                                @item.PublishDate
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>

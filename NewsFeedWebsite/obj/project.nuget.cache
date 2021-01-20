@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qHjIaHtPq8vUmdAYUK2rkkLatNhms7UwcJU6oqVnluVXcAmQPJ2L44ZS2C5PmQfJjFggVGQwksOnZLEvP4jycA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aznzl\\Desktop\\Github\\NewsFeedWebsite\\NewsFeedWebsite\\NewsFeedWebsite.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aznzl\\.nuget\\packages\\system.servicemodel.syndication\\5.0.0\\system.servicemodel.syndication.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
